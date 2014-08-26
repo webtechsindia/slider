@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>master slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="ms.js"></script>
+    <style>
+        .slide-view{
+            height: 200px;
+            background: #eff;
+        }
+        .slide{
+            height: 50px;
+            width:  150px;
+            background: lightblue;
+            margin: 10px;
+            padding: 20px;
+            display: inline-block;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <input id="addslide-btn" type="button" value="add a slide" >
+    
+    <div id="main">
+        <div class="slide-list"></div>
+        <div class="slide-view"></div>
+    </div>
+    <script>
+        $(function(){
+            mainView.init( $('#main') );
+
+            $('#addslide-btn').click( function(){
+                mainView.addSlide();
+            });
+        });
+    </script>
+</body>
+</html>
